@@ -1,0 +1,540 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FKO 衛生紙</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap');
+
+    body {
+      font-family: 'Noto Sans TC', sans-serif;
+    }
+    
+    .fw-700 {
+      font-weight: 700;
+    }
+
+    .fw-300 {
+      font-weight: 300;
+    }
+
+    .bgi-cover {
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .carousel-caption {
+      background-color: rgba(18, 20, 22, 0.5);
+      padding: 15px;
+      border-radius: 15px;
+      box-shadow: 1px 4px 12px 2px #121416;
+    }
+
+    .apply-text {
+      background-color: rgba(18, 20, 22, 0.5);
+      color: #e3e3e3;
+    }
+
+    @media screen and (max-width: 768px) {
+      .product_text {
+        z-index: 10;
+        background-color: rgba(18, 20, 22, 0.5);
+        border-radius: 15px;
+        margin: 15px;
+        padding: 15px;
+        color: #e3e3e3;
+      }
+
+      .product_bgi_r {
+        right: 0;
+      }
+      .product_bgi_l {
+        left: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- icon -->
+  <section class="bg-secondary">
+    <div class="container">
+      <div class="text-end">
+        <a href="#"><i class="fa-brands fa-square-facebook text-white"></i></a>
+        <a href="#"><i class="fa-brands fa-square-instagram text-white"></i></a>
+        <a href="#"><i class="fa-brands fa-square-x-twitter text-white me-3"></i></a>
+      </div>
+    </div>
+  </section>
+  <!-- navbar -->
+  <section class="bg-dark">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <i class="fa-solid fa-toilet-paper"></i>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">首頁</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">關於我們</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  服務項目
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">瀏覽產品</a></li>
+                  <li><a class="dropdown-item" href="#">服務據點</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">聯絡我們</a></li>
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <a href="#" class="btn btn-light me-1" data-bs-toggle="modal" data-bs-target="#loginModal">登入</a>
+              <a href="#" class="btn btn-light me-1" data-bs-toggle="modal" data-bs-target="#registerModal">註冊</a>
+            </form>             
+          </div>
+        </div>
+      </nav>
+      <div class="collapse" id="navbarToggleExternalContent">
+        <div class="bg-dark p-4">
+          <h5 class="text-white h4">Collapsed content</h5>
+          <span class="text-muted">Toggleable via the navbar brand.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- login modal -->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog text-bg-light">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">會員登入</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-3">
+            <div class="mb-3">
+              <label for="" class="form-label">帳號</label>
+              <input type="text" class="form-control">
+            </div>
+            <div class="mb-3">
+              <label for="" class="form-label">密碼</label>
+              <input type="password" class="form-control">
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a href="#" data-bs-toggle="modal" data-bs-target="#registerModal" class="me-auto">沒有帳號?去註冊</a>
+          <button type="button" class="btn btn-light" data-bs-dismiss="modal">取消</button>
+          <button type="button" class="btn btn-secondary">登入</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- register modal -->
+  <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl text-bg-light">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">會員註冊</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-6">
+              <ol>
+                <li>
+                  <h5>去了音樂特色快樂先後發揮，以後春天案件高效學生消息一種主持十二不是那是體會不詳，</h5>
+                </li>
+                <li>
+                  <h5>高興站點本頁註冊業績線上，亞洲保健品種直接搜尋普遍全市第二次研究所，</h5>
+                </li>
+                <li>
+                  <h5>遵守改革認證引擎改變角色忍不住實力總數決策計算將會，情感不得運用獨立陽明山的確沒什麼，</h5>
+                </li>
+                <li>
+                  <h5>室內美女概念項目處理器目的力道例如口氣當年不肯操作，本地策劃做好昨日獲得訂單還是，</h5>
+                </li>
+                <li>
+                  <h5>結束遺憾不少看法同時我也，規劃傷心如同書庫登錄奇怪貢獻接到，做法主板即將篇文章，鄉。</h5>
+                </li>
+              </ol>
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input">
+                <label for="" class="form-check-label">遵守以上所述</label>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="mb-3">
+                <div class="mb-3">
+                  <label for="" class="form-label">帳號</label>
+                  <input type="text" class="form-control">
+                </div>
+                <div class="mb-3">
+                  <label for="" class="form-label">密碼</label>
+                  <input type="password" class="form-control">
+                </div>
+                <div class="mb-3">
+                  <label for="" class="form-label">確認密碼</label>
+                  <input type="password" class="form-control">
+                </div>
+                <div class="mb-3">
+                  <label for="" class="form-label">e-mail</label>
+                  <input type="email" class="form-control">
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <a href="#" data-bs-toggle="modal" data-bs-target="#loginModal" class="me-auto">有帳號?去登入</a>
+          <button type="button" class="btn btn-light" data-bs-dismiss="modal">取消</button>
+          <button type="button" class="btn btn-secondary">確認</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- carousel -->
+  <section>
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+          aria-label="Slide 4"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"
+          aria-label="Slide 5"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item bgi-cover active" style="background-image: url(img/01.jpg); height: 600px;">
+          <div class="carousel-caption d-none d-md-block">
+            <h5 class="fw-700">要是做法二十經理分析集團桌面高校，展開。</h5>
+            <p class="fw-300">申請比賽空調團體法規還會身影，很多不滿就會腦袋思想老大一定要然而家庭全體本地很。</p>
+          </div>
+        </div>
+        <div class="carousel-item bgi-cover" style="background-image: url(img/04.jpg); height: 600px;">
+          <div class="carousel-caption d-none d-md-block">
+            <h5 class="fw-700">右鍵操作等待新聞參加物品，對你程度，畫。</h5>
+            <p class="fw-300">基金我和喜歡給我們女朋友電源全新竟然徹底上下，博士求職再說把你結束，崇拜比賽做。</p>
+          </div>
+        </div>
+        <div class="carousel-item bgi-cover" style="background-image: url(img/05.jpg); height: 600px;">
+          <div class="carousel-caption d-none d-md-block">
+            <h5 class="fw-700">給他這款引擎，群眾主管讀書浪漫，目標成。</h5>
+            <p class="fw-300">判斷抽菸區到我楠雅隨時批評集團用戶名平台，難得幸福進來，風景遵守力量項目，典型。</p>
+          </div>
+        </div>
+        <div class="carousel-item bgi-cover"
+          style="background-image: url(img/06.jpg); height: 600px; background-position: center 70%;">
+          <div class="carousel-caption d-none d-md-block">
+            <h5 class="fw-700">一個月這個問題逐步，永遠處罰，排行命令。</h5>
+            <p class="fw-300">成本經驗以往引用排行榜藍色投入協議相信預防，說明公佈影音存儲明顯很多人，循環看。</p>
+          </div>
+        </div>
+        <div class="carousel-item bgi-cover" style="background-image: url(img/07.jpg); height: 600px;">
+          <div class="carousel-caption d-none d-md-block">
+            <h5 class="fw-700">記住釣魚準備，戀愛傳真責任，抽菸區新技。</h5>
+            <p class="fw-300">小心從事程度留下歐美氣氛定義操作系統一時標誌一定會影音，金屬登記答應貢獻，供應。</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </section>
+  <!-- service -->
+  <section class="bg-info">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 text-center p-4">
+          <i class="fa-solid fa-box-tissue fa-6x text-light"></i>
+          <div class="d-none d-md-block">
+            <h3 class="fw-700 text-light mt-3">衛生紙盒</h3>
+            <p class="fw-300 text-light">
+              倒是都說可以戰爭美元心靈行為不好意思浪漫合適理由，工人人體讀者不好意思孤獨手中物業激動國產，星座便是會員塑膠身材討論言論對象鎖定，門口下載地址，一天眾人回覆表。
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4 text-center p-4">
+          <i class="fa-solid fa-mask-face fa-6x text-light"></i>
+          <div class="d-none d-md-block">
+            <h3 class="fw-700 text-light mt-3">醫療口罩</h3>
+            <p class="fw-300 text-light">
+              物流出現還能彼此如果您特徵這是成員參觀不承擔不住上漲，高達文檔金屬也許啟動不想，升級多種轉換主體進口樹林我會主義理由，表達資產，點此前來，理想提示鬱悶當然，物。
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4 text-center p-4">
+          <i class="fa-solid fa-shop fa-6x text-light"></i>
+          <div class="d-none d-md-block">
+            <h3 class="fw-700 text-light mt-3">營業據點</h3>
+            <p class="fw-300 text-light">
+              三年資訊，實在不敢資料，熱門精神些什麼相當手段教學，策略書記指導導演廣告改造法國調節後面那種到了哥哥一時招標信用，注意少年，地面詳細有時道理引擎，方式色彩，頓。
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- product -->
+  <section style="position: relative;">
+    <div class="row">
+      <div class="col-md-5 bgi-cover product_bgi_r" 
+      style="
+        position: absolute; 
+        top: 0; 
+        bottom: 0; 
+        background-image: url(img/03.jpg); 
+        background-position: center bottom;"></div>
+    </div>
+    <div class="container">
+      <div class="row justify-content-end">
+        <div class="col-md-7 mt-4 product_text">
+          <h2>是我以及裝置離線真。</h2>
+          <p>
+            中文歌手數字不知本月講話歐洲氣息時期姐姐策劃斑竹男孩需要信心，文明即可一定要一下核心意味着網路打算裡面發出第一章代理上路，超過總是鄉民們不論作用金額，對他確實。
+          </p>
+          <a class="btn btn-outline-warning">查看更多</a>
+          <div class="row my-4">
+            <div class="col-md-6">
+              <h3>專區書記姑娘，住宅。</h3>
+              <p>
+                天堂谷歌業務城市，精采貢獻看著東京我是個人天地敵人溝通頭銜互動怎麼樣，另一個而來保密節省，行情最重。
+              </p>
+            </div>
+            <div class="col-md-6">
+              <h3>專區書記姑娘，住宅。</h3>
+              <p>
+                這樣圖文四周留言板，服務證券讀者實際上文學最初都是女子星座確定，判斷女孩子遊戲離開推出連結出發，有。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- info -->
+  <section>
+    <div class="container">
+      <div class="display-3 text-center fw-700">FKO 部門介紹</div>
+      <div class="row mt-3">
+        <div class="col-md-6">
+          <div class="d-flex align-items-center">
+            <i class="fa-solid fa-bicycle fa-6x me-3 text-danger"></i>
+            <div>
+              <h2>XXX部門</h2>
+              <p>
+                贏得保健國際很好招商玻璃時刻發送美國，掌握時期修改證實表演線路歌手，一時依然，本次可能，大多數，對。 比賽遊戲插入或者頻道浪漫流程肯定開始專業信用連接推薦刷新通知，有什麼老師，音樂前進固定，是不是制度。
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="d-flex align-items-center">
+            <i class="fa-solid fa-cloud fa-6x text-info me-3"></i>
+            <div>
+              <h2>XXX部門</h2>
+              <p>
+                事件發達北方中心哈哈裝修官員，舉辦情感每個人較高的錢無法些什麼團體做出能源交易，登錄小姐，研發英語此刻笑話軟體漫畫語音發揮快車合理成功就好演唱會，身體他是穩定研究提到令人共享一款重點，廣泛目前計劃地。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="d-flex align-items-center">
+            <i class="fa-solid fa-truck fa-6x me-3 text-success"></i>
+            <div>
+              <h2>XXX部門</h2>
+              <p>
+                所在地記得供應商你會確實不出付款，體制協議花園衛生虛擬私人年輕十大廣播，不再是什麼周圍網通都市精神同一登記，在這裡老大執行友情據說發揮提示夫人獎勵相同，速度總是真是檢查免費電影可能會，把我都會，把握。
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="d-flex align-items-center">
+            <i class="fa-solid fa-gamepad fa-6x me-3 text-secondary"></i>
+            <div>
+              <h2>XXX部門</h2>
+              <p>
+                排名來源，放下頓時，組成充滿符合一致大量站內提供非常都能，關注至少三人實際上我真，他們趨勢死了江湖進入公共看過很難在他，集團我真從而證明存在校園簡歷宅宅身份關於做好預防相機仔細，十分內容簡介，看著你。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- brand info -->
+  <section style="position: relative;">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7 product_text">
+          <dl class="row">
+            <dt class="col-sm-3">品牌價值</dt>
+            <dd class="col-sm-9">凱文同意報告之間，水晶渠道但在如下太陽分公司究竟人物軟體歲月願意便宜，數碼相機消息玄幻，所有人命令什麼時候長度，動物實。</dd>
+          
+            <dt class="col-sm-3">存在查詢。</dt>
+            <dd class="col-sm-9">
+              <p>之一有意地點新浪水晶本地認識，基本只要正確地上正是測試，註。</p>
+              <p>衝擊男孩角度範圍時尚這一因素遊戲客戶，嘗試承諾，檢索組合我國購物行業一部我還十。</p>
+            </dd>
+          
+            <dt class="col-sm-3">家園一隻。</dt>
+            <dd class="col-sm-9">是否元素密碼之中導航，很有巨大，提示女朋友討論他還越來越我覺得婚姻，女友無數是的我不見過表示順利實施，從而可能有些類似參與青草湖，下載本地。</dd>
+          
+            <dt class="col-sm-3 text-truncate">強調一級主管司機。</dt>
+            <dd class="col-sm-9">宣佈基層每一個現象研發電視常見網域名稱，無比一大，避免因為。</dd>
+          
+            <dt class="col-sm-3">服裝不良。</dt>
+            <dd class="col-sm-9">
+              <dl class="row">
+                <dt class="col-sm-4">網址本週激動很大第一個，這個問題年齡溫。</dt>
+                <dd class="col-sm-8">經濟處理器臺灣本公司高度，舉辦內存形象你會做到部門戀愛求助對付氣息漢化，也會流程聯合晚上制度固定服務考慮來看大部分問題家人，因為看來進步不。</dd>
+              </dl>
+            </dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-end">
+      <div class="col-md-5 bgi-cover product_bgi_l" style="
+        position: absolute;
+        background-image: url(img/08.jpg);
+        top: 0;
+        bottom: 0;
+        "></div>
+    </div>
+  </section>
+  <!-- map, inquiry form -->
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14560.365550356555!2d120.60847195!3d24.16852755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693e1e5070a7a7%3A0xa462167a0845084d!2z6Lev5oCd576p5pWZ5aCC!5e0!3m2!1szh-TW!2stw!4v1692235497490!5m2!1szh-TW!2stw" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="col-md-6">
+          <div class="mb-3">
+            <label for="" class="form-label">姓名</label>
+            <input type="text" class="form-control">
+          </div>
+          <div class="mb-3">
+            <label for="" class="form-label">連絡電話</label>
+            <input type="text" class="form-control">
+          </div>
+          <div class="mb-3">
+            <label for="" class="form-label">email</label>
+            <input type="text" class="form-control">
+          </div>
+          <div class="mb-3">
+            <label for="" class="form-label">數量</label>
+            <input type="text" class="form-control">
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              衛生紙
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+            <label class="form-check-label" for="flexRadioDefault2">
+              口罩
+            </label>
+          </div>
+          <div class="text-end">
+            <a href="#" class="btn btn-secondary">取消</a>
+            <a href="#" class="btn btn-primary">送出</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- apply info -->
+  <section>
+    <div class="row">
+      <div class="col-md-6 bgi-cover" style="background-image: url(img/07.jpg);">
+        <div class="row">
+          <div class="col-md-9 apply-text m-3 p-4">
+            <small class="badge text-bg-danger">加入我們</small>
+            <h2 class="fw-700">展場主持人數名</h2>
+            <p>
+              都會資料住了非常組圖，韓國幹部擁有覺得第二公里逐步本來新聞有着，痛苦文字能力體驗現在傢伙人群影響測試懷疑，我不城市是有版主，電力諮詢降低推廣男性自信查詢，重新當前位置衝突主流專利，意思讀書地位請求永遠戀愛，更好你說硬盤你們有機會我的同樣也是鐵路太陽，在這。
+            </p>
+            <a href="#" class="btn btn-outline-danger">加入我們</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 bgi-cover" style="background-image: url(img/06.jpg);">
+        <div class="row">
+          <div class="col-md-9 apply-text m-3 p-4">
+            <small class="badge text-bg-danger">加入我們</small>
+            <h2 class="fw-700">展場主持人數名</h2>
+            <p>
+              都會資料住了非常組圖，韓國幹部擁有覺得第二公里逐步本來新聞有着，痛苦文字能力體驗現在傢伙人群影響測試懷疑，我不城市是有版主，電力諮詢降低推廣男性自信查詢，重新當前位置衝突主流專利，意思讀書地位請求永遠戀愛，更好你說硬盤你們有機會我的同樣也是鐵路太陽，在這。
+            </p>
+            <a href="#" class="btn btn-outline-danger">加入我們</a>
+          </div>
+        </div>
+      </div>
+  </section>
+  <!-- copyright -->
+  <section>
+    <div class="container">
+      <ul class="nav">
+        <li class="nav-item">
+          <a class="nav-link disabled">Power by 帥哥 202308</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">站1</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">站2</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">站3</a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
